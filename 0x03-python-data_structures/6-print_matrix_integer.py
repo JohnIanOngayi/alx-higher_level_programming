@@ -10,4 +10,5 @@ def print_matrix_integer(matrix=[[]]):
             if j != lem - 1:
                 print("{0:d} ".format(matrix[i][j]), end='')
             else:
-                print("{0:d}".format(matrix[i][j]))
+                print("{0:d}".format(matrix[i][j]), end='')
+        print()
