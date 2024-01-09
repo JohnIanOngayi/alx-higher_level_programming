@@ -1,0 +1,110 @@
+Test Cases for ``7-base_geometry`` module
+========================================
+
+This module utilises ``doctest`` module to test ``7-base_geometry`` module
+
+Usage
+=====
+
+Importing the class from the module:
+	>>> MyList = __import__("1-my_list").MyList
+
+Checking for docstrings:
+	>>> d = __import__("1-my_list").__doc__
+	>>> len(d) > 1
+	True
+
+	>>> d = __import__("1-my_list").MyList.__doc__
+	>>> len(d) > 1
+	True
+
+        >>> d = __import__("1-my_list").MyList.print_sorted.__doc__
+        >>> len(d) > 1
+        True
+
+Checking given test case
+	>>> my_list = MyList()
+
+	>>> my_list.append(1)
+
+	>>> my_list.append(4)
+
+	>>> my_list.append(2)
+
+	>>> my_list.append(3)
+
+	>>> my_list.append(5)
+
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+Checking empty instance
+	>>> instance = MyList()
+
+	>>> print(instance)
+	[]
+
+	>>> instance.print_sorted()
+	[]
+
+Checking negative values
+	>>> instance = MyList()
+
+	>>> instance.append(-1)
+
+	>>> instance.append(0)
+
+	>>> instance.append(-233)
+
+	>>> instance.append(-9)
+
+	>>> print(instance)
+	[-1, 0, -233, -9]
+
+	>>> instance.print_sorted()
+	[-233, -9, -1, 0]
+
+Checking None
+	>>> instance = MyList()
+
+	>>> instance.append(None)
+
+	>>> print(instance)
+	[None]
+
+	>>> instance.print_sorted()
+	[None]
+
+Checking NULL
+	>>> instance = MyList()
+
+	>>> instance.append(NULL)
+	Traceback (most recent call last):
+	    ...
+	NameError: name 'NULL' is not defined
+
+	>>> print(instance)
+	[]
+
+	>>> instance.print_sorted()
+	[]
+
+Checking NaN
+	>>> instance = MyList()
+
+	>>> instance.append(NaN)
+	Traceback (most recent call last):
+	    ...
+	NameError: name 'NaN' is not defined
+
+	>>> print(instance)
+	[]
+
+	>>> instance.print_sorted()
+	[]
