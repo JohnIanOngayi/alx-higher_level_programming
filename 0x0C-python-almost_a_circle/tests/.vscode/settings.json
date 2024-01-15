@@ -1,0 +1,7 @@
+{
+	"C_Cpp.autocompleteAddParentheses": true,
+	"C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+	"C_Cpp.inlayHints.parameterNames.enabled": true,
+	"C_Cpp.inlayHints.referenceOperator.showSpace": true,
+	"C_Cpp.legacyCompilerArgsBehavior": true
+}
