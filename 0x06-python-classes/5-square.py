@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module defines the properties of object of class Square and prints it
+"""
 
 
 class Square:

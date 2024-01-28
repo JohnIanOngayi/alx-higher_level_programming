@@ -1,7 +1,14 @@
 {
-	"C_Cpp.autocompleteAddParentheses": true,
-	"C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
-	"C_Cpp.inlayHints.parameterNames.enabled": true,
-	"C_Cpp.inlayHints.referenceOperator.showSpace": true,
-	"C_Cpp.legacyCompilerArgsBehavior": true
+	"python.testing.unittestArgs": [
+		"-v",
+		"-s",
+		"./test_models",
+		"-p",
+		"*test*.py"
+	],
+	"python.testing.pytestEnabled": false,
+	"python.testing.unittestEnabled": true,
+	"python.testing.pytestArgs": [
+		"test_models"
+	]
 }
