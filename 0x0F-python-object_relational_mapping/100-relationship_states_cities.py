@@ -21,8 +21,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    allCities = list(session.query(
-        City, State
-        ).filter(City.state_id == State.id).order_by(City.id))
-    for city in allCities:
-        print(f"{city['State'].name}: ({city['City'].id}) {city['City'].name}")
+    california = State(name='California')
+    san_francisco = City(name='San Francisco', state='California')
+    session.add_all([california, san_francisco])
+    session.commit()
+    session.close()

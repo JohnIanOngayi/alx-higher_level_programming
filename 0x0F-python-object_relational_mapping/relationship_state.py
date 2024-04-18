@@ -5,6 +5,8 @@ Module defines class states
 """
 from sqlalchemy import String, Integer, Column
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
+from relationship_city import City
 
 Base = declarative_base()
 
@@ -23,4 +25,10 @@ class State(Base):
             unique=True,
             nullable=False
             )
-    name = Column("name", String(length=128), nullable=False)
+    name = Column(
+        "name",
+        String(length=128),
+        nullable=False
+    )
+
+    cities = relationship('City', backref='state', cascade='all, delete')

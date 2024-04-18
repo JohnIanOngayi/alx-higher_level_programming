@@ -5,13 +5,13 @@ Module defines db table to store cities
 """
 
 from sqlalchemy import String, Integer, Column, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from model_state import Base
-
-Base = declarative_base()
+from relationship_state import Base, State
 
 
 class City(Base):
+    """
+    Mapped class to store cities
+    """
     __tablename__ = "cities"
     id = Column(
             "id",
